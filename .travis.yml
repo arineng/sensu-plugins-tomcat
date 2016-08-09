@@ -7,10 +7,11 @@ rvm:
 - 2.0
 - 2.1
 - 2.2
+- 2.3.0
 notifications:
   email:
     recipients:
-    - sensu-plugin@sensu-plugins.io
+    - smbambling@gmail.com
     on_success: change
     on_failure: always
 script:
@@ -21,9 +22,13 @@ deploy:
   provider: rubygems
   gem: sensu-plugins-tomcat
   on:
-    ags: true
+    tags: true
     all_branches: true
     rvm: 2.0
     rvm: 2.1
     rvm: 2.2
-    repo: sensu-plugins/sensu-plugins-tomcat
+    rvm: 2.3.0
+    repo: smbambling/sensu-plugins-tomcat
+addons:
+    code_climate:
+          repo_token:
