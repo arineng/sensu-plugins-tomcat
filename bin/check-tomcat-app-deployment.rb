@@ -20,7 +20,7 @@
 #  Basic Usage:
 #    ./check-tomcat-app-deployment
 #  Specify Applications:
-#    check-tomcat-app-deployment -a '/manager,/jasperreports'
+#    check-tomcat-app-deployment -l '/manager,/jasperreports'
 #
 # NOTES:
 #
@@ -53,7 +53,7 @@ class CheckTomcatAppDeployment < Sensu::Plugin::Check::CLI
 
   option :apps,
          description: 'A comma seperated list of application paths to verify are in a running state',
-         short: '-a VALUE',
+         short: '-l VALUE',
          long: '--applications VALUE',
          default: '/,/manager',
          required: true
